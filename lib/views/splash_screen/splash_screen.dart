@@ -4,6 +4,7 @@ import 'package:flutter_clean_code/config/components/internet_exception_widget.d
 import 'package:flutter_clean_code/config/components/loading_widgets.dart';
 import 'package:flutter_clean_code/config/components/round_button.dart';
 import 'package:flutter_clean_code/config/routes/routes_name.dart';
+import 'package:flutter_clean_code/data/exception/app_exception.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -19,6 +20,10 @@ class SplashScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          throw NoInternetException('');
+        }),
       body:  Center(
         child: Column(
           children: [
