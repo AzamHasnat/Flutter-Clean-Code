@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_code/config/route/routes_name.dart';
+import 'package:flutter_clean_code/config/routes/routes_name.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

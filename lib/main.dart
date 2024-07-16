@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_code/config/route/routes.dart';
-import 'package:flutter_clean_code/config/route/routes_name.dart';
+import 'package:flutter_clean_code/config/routes/routes.dart';
+import 'package:flutter_clean_code/config/routes/routes_name.dart';
 
 void main() {
   runApp(const MyApp());
