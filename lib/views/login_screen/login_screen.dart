@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_code/config/route/route_name.dart';
+import 'package:flutter_clean_code/config/route/routes_name.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Login Screen",
           style: TextStyle(color: Colors.white),
         ),
@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
               ),
               child: const Text('Home')),
           onPressed: () {
-            Navigator.pushNamed(context, RouteName.homeScreen);
+            Navigator.pushNamed(context, RoutesName.homeScreen);
           },
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_code/config/route/route_name.dart';
+import 'package:flutter_clean_code/config/route/routes_name.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             ),
             child: Text("Back To Login"),
           ), onPressed: (){
-            Navigator.pushNamed(context, RouteName.loginScreen);
+            Navigator.pushNamed(context, RoutesName.loginScreen);
           })),
     );
   }
