@@ -66,7 +66,7 @@ class NetworkServiceApi implements BaseApiServices{
      
      try{
 
-      final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 50));
+      final response = await http.delete(Uri.parse(url)).timeout(const Duration(seconds: 50));
       jsonResponse = returnResponse(response);
 
      }on SocketException{
