@@ -11,14 +11,16 @@ class RoundButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPress,
-      child: Container(
-        height: height,
-        decoration: BoxDecoration(
-          color: AppColors.buttonColor,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(
-          child: Text(title),
+      child: AbsorbPointer(
+        child: Container(
+          height: height,
+          decoration: BoxDecoration(
+            color: AppColors.buttonColor,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Center(
+            child: Text(title),
+          ),
         ),
       ),
     );

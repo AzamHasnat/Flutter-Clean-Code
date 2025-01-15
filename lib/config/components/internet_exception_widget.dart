@@ -17,7 +17,7 @@ class InternetExceptionWidget extends StatelessWidget {
             size: 50,
           ),
            Padding(
-            padding:  EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.only(top: 30),
             child: Center(
               child: Text(
                 "We're unable to show result.\nPlease check your internet\nconnection",
