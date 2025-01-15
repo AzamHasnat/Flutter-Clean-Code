@@ -30,7 +30,7 @@ class InternetExceptionWidget extends StatelessWidget {
             ),
             ),
             SizedBox(
-          height: MediaQuery.sizeOf(context).height * 0.1),
+             height: MediaQuery.sizeOf(context).height * 0.1),
             ElevatedButton(
               onPressed: onPress, 
               child: Center(

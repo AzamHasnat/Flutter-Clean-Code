@@ -5,10 +5,28 @@ import 'package:flutter_clean_code/config/components/loading_widgets.dart';
 import 'package:flutter_clean_code/config/components/round_button.dart';
 import 'package:flutter_clean_code/config/routes/routes_name.dart';
 import 'package:flutter_clean_code/data/exception/app_exception.dart';
+import 'package:flutter_clean_code/services/splash/splash_services.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  SplashServices _splashServices = SplashServices();
+
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _splashServices.isLogin(context);
+
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,38 +38,12 @@ class SplashScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      floatingActionButton: FloatingActionButton(
+      /* floatingActionButton: FloatingActionButton(
         onPressed: (){
           throw NoInternetException('');
-        }),
+        }), */
       body:  Center(
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal:20),
-              child: InternetExceptionWidget(onPress: (){},),
-            ),
-           // const LoadingWidget(size: 30,),
-          /*  const SizedBox(height: 20,),
-            RoundButton(title:"Title",onPress: (){
-        
-            }),
-             const SizedBox(height: 20,),
-            CupertinoButton(
-              color: Colors.blue,
-              child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Colors.blue,
-                  ),
-                  child: const Text('Login')),
-              onPressed: () {
-                Navigator.pushNamed(context, RoutesName.loginScreen);
-              },
-            ), */
-          ],
-        ),
+        child: Text("Splash Screen",style: TextStyle(fontSize: 50),)
       ),
     );
   }

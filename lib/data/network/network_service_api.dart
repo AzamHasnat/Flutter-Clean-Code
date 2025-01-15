@@ -17,9 +17,9 @@ class NetworkServiceApi implements BaseApiServices {
 
         jsonReponse = returnResponse(response);  
 
-      if (response.statusCode == 200) {
+      /* if (response.statusCode == 200) {
         return response.body;
-      }
+      } */
     } on SocketException {
       throw NoInternetException('No Internet Connection');
     } on TimeoutException {
@@ -32,15 +32,12 @@ class NetworkServiceApi implements BaseApiServices {
   Future<dynamic> deleteApi(String url) async {
     // TODO: implement getApi
     dynamic jsonReponse;
-    try {
+    try { 
       final response =
           await http.delete(Uri.parse("uri")).timeout(const Duration(seconds: 50));
 
         jsonReponse = returnResponse(response);  
 
-      if (response.statusCode == 200) {
-        return response.body;
-      }
     } on SocketException {
       throw NoInternetException('No Internet Connection');
     } on TimeoutException {
@@ -61,15 +58,11 @@ class NetworkServiceApi implements BaseApiServices {
 
         jsonReponse = returnResponse(response);  
 
-      if (response.statusCode == 200) {
-        return response.body;
-      }
     } on SocketException {
       throw NoInternetException('No Internet Connection');
     } on TimeoutException {
       throw FetchDataException("Timeout Exception");
     }
-
     return jsonReponse;
   }
 
